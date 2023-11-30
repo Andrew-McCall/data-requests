@@ -1,9 +1,9 @@
 import './App.css';
-import CatFacts from './components/CatFacts';
+import KingsDataLoad from './components/KingsDataLoad';
 
 function App() {
   return (
-    <CatFacts/>
+    <KingsDataLoad/>
   );
 }
 
