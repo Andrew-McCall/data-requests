@@ -2,19 +2,18 @@ import axios from "axios";
 import { useState } from "react";
 
 function KingsDataLoad(){
-
     const [kings, setKings] = useState([]); 
-
-    const kingsData = []
-
-    for (let king of kings){
-        kingsData.push(<p>{king.nm}</p>)
-    }
 
     function getData(){
         axios.get("https://raw.githubusercontent.com/JHarry444/LBG-React-Demo/main/src/data/kings.json")
             .then((response) => { setKings(response.data)} )
             .catch((error) => {console.log(error)})
+    }
+
+    const kingsData = []
+
+    for (let king of kings){
+        kingsData.push(<p>{king.nm}</p>)
     }
 
     return (
