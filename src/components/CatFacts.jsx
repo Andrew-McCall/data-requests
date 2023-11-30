@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios';
 
 function CatFacts() {
@@ -19,6 +19,10 @@ function CatFacts() {
             })
 
     }
+
+    useEffect( () => {
+        getFact()
+    }, [])
 
     return (
     <div>
