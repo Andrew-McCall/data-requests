@@ -1,17 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-// Get data from jordans github on button press
-// Render the kings as html
-
-// Get the data upon page load
-
-// Add another useState for filter
-// Add form for filter
-// Make filter, filter kings
-
-// 15:00
-
 function KingData(){
     const [kings, setKings] = useState([])
 
