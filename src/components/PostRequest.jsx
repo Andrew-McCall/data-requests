@@ -21,7 +21,7 @@ function PostRequest(){
 
     // Turn all messages into html
     const htmlMessages = []
-    message.reverse()
+    message.sort((a,b)=> b.time - a.time)
     for (let m of message){
         htmlMessages.push(<p>Name: {m.user}<br/>Message: {m.message}</p>)
     }
