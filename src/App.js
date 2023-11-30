@@ -1,10 +1,10 @@
 import './App.css';
-import KingData from './components/KingData';
+import PostRequest from './components/PostRequest';
 // import CatFacts from './components/CatFacts';
 
 function App() {
   return (
-    <KingData/>
+    <PostRequest/>
   );
 }
 
