@@ -7,13 +7,14 @@ function PostRequest(){
     const [message, setMessage] = useState([])
     const [ourMessage, setOurMessage] = useState("")
 
-    // Update messages every 2second
-    setInterval(() => {
-        getMessages()
-    }, 2000)
-
     // Upon page load, post for a new user and save to user useState
     useEffect(() => {
+
+        // Update messages every 2second
+        setInterval(() => {
+            getMessages()
+        }, 2000)
+
         getMessages();
     }, [])
 
