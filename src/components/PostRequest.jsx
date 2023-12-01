@@ -52,12 +52,12 @@ function PostRequest(){
     return(<div>
 
         <h1> My message board:
-            <input disabled={user.isValid} value={user.userName} onChange={(e) => setUser({userName:e.target.value})}></input>
+            <input disabled={user.isValid} value={user.userName} placeholder="Username" onChange={(e) => setUser({userName:e.target.value})}></input>
             { !user.isValid && <button onClick={() => login()}> Login </button>}
         </h1>
         <div hidden={!user.isValid} style={{"text-algin":"center"}}>
             <button onClick={() => getMessages()}> Refresh </button>
-            <input id="message-input" value={ourMessage} onChange={(e) => setOurMessage(e.target.value)}></input>
+            <input id="message-input" placeholder="Message" value={ourMessage} onChange={(e) => setOurMessage(e.target.value)}></input>
             <button onClick={() => sendMessage()}> SEND </button>
         </div>
         {htmlMessages}
