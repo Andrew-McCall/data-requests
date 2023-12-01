@@ -27,7 +27,7 @@ function PostRequest(){
     const htmlMessages = []
     message.sort((a,b)=> b.time - a.time)
     for (let m of message){
-        htmlMessages.push(<p>Name: {m.user}<br/>Message: {m.message}</p>)
+        htmlMessages.push(<p key={m.time}>Name: {m.user}<br/>Message: {m.message}</p>)
     }
 
     // Send a message. Axios post, with a data object
