@@ -55,7 +55,7 @@ function PostRequest(){
             <input disabled={user.isValid} value={user.userName} placeholder="Username" onChange={(e) => setUser({userName:e.target.value})}></input>
             { !user.isValid && <button onClick={() => login()}> Login </button>}
         </h1>
-        <div hidden={!user.isValid} style={{"text-algin":"center"}}>
+        <div hidden={!user.isValid} style={{"textAlgin":"center"}}>
             <button onClick={() => getMessages()}> Refresh </button>
             <input id="message-input" placeholder="Message" value={ourMessage} onChange={(e) => setOurMessage(e.target.value)}></input>
             <button onClick={() => sendMessage()}> SEND </button>
