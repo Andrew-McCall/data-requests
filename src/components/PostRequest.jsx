@@ -32,6 +32,7 @@ function PostRequest(){
         setOurMessage("")
     }
 
+    // Create a new user. Axios post, with a data object
     function login(){
         axios.post("http://165.120.188.147:2514/createAccount", {user:user.userName})
             .then( (res) => {
