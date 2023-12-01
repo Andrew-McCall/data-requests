@@ -1,4 +1,5 @@
 import axios from "axios";
+import Message from './Message';
 import { useEffect, useState } from "react";
 
 function PostRequest(){
@@ -27,7 +28,8 @@ function PostRequest(){
     const htmlMessages = []
     message.sort((a,b)=> b.time - a.time)
     for (let m of message){
-        htmlMessages.push(<p key={m.time}>Name: {m.user}<br/>Message: {m.message}</p>)
+        // htmlMessages.push(<p key={m.time}>Name: {m.user}<br/>Message: {m.message}</p>)
+        htmlMessages.push(<Message key={m.time} message={m.message} time={m.time} user={m.user}/>)
     }
 
     // Send a message. Axios post, with a data object
@@ -53,9 +55,9 @@ function PostRequest(){
             <input disabled={user.isValid} value={user.userName} onChange={(e) => setUser({userName:e.target.value})}></input>
             { !user.isValid && <button onClick={() => login()}> Login </button>}
         </h1>
-        <div hidden={!user.isValid}>
-            <button onClick={() => getMessages()}> Refresh </button><br/>
-            <input value={ourMessage} onChange={(e) => setOurMessage(e.target.value)}></input>
+        <div hidden={!user.isValid} style={{"text-algin":"center"}}>
+            <button onClick={() => getMessages()}> Refresh </button>
+            <input id="message-input" value={ourMessage} onChange={(e) => setOurMessage(e.target.value)}></input>
             <button onClick={() => sendMessage()}> SEND </button>
         </div>
         {htmlMessages}

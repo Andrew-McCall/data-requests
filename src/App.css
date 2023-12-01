@@ -1,38 +1,55 @@
-.App {
+body {
+  margin: 10px;
+  background-color: rgb(255, 238, 254);
+}
+h1{
   text-align: center;
+  font-size: 2em;
+  color: #fff;
+  background-color: rgb(250, 177, 239);
+  padding: 10px;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#message-input{
+  width: 79%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  width: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input{
+  text-align: center;
+  vertical-align: middle;
+  width: 20%;
+  padding: 5px;
+  margin: 10px 02px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
 }
 
-.App-link {
-  color: #61dafb;
+h3, p, span {
+  vertical-align: middle;
+  margin: 0;
+  padding: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.small {
+  font-size: 0.6em;
+}
+
+
+.message-card{
+  margin: auto;
+  max-width: 80%;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-top: 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #ccc;
 }
